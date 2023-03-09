@@ -1,14 +1,18 @@
 import HomePage from "../pages/home-page";
 import CardPage from "../pages/card-page";
 import { Routes, Route } from "react-router-dom";
+import Header from "../header/Header";
 
 const App = () => {
 
     return (
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="card" element={<CardPage />} />
-            </Routes>
+            <main role='main' className="container">
+                <Header numItems={5} total={210} />
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="card" element={<CardPage />} />
+                </Routes>
+            </main>
     )
 }
 
