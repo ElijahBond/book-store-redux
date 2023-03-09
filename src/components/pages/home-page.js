@@ -6,9 +6,6 @@ const HomePage = () => {
 
     return (
         <div>
-            This is HomePage
-
-            <Link to="/card">To Card page</Link>
             <BookList />
             <ShoppingCartTable />
         </div>

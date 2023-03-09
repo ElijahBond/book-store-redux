@@ -1,6 +1,6 @@
 import './book-list-item.scss'
 
-const BooksListItem = ({ book }) => {
+const BooksListItem = ({ book, onAddedToCard }) => {
     const {title, author, price, coverImage} = book;
 
     return (
@@ -12,7 +12,10 @@ const BooksListItem = ({ book }) => {
                 <a href='#' className='book-title'>{title}</a>
                 <div className='book-author'>{author}</div>
                 <div className='book-price'>${price}</div>
-                <button className='btn btn-info add-to-card'>Add to card</button>
+                <button
+                    className='btn btn-info add-to-card'
+                    onClick={onAddedToCard}
+                    >Add to card</button>
             </div>
         </div>
     )
